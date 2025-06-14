@@ -25,54 +25,31 @@ chessp/
 ├── README.md
 └── requirements.txt
 
-shell
-Copy
-Edit
 
 ## 🚀 Getting Started
 
-### 1. Install Dependencies
+### 1. Clone the Repository
 
 ```bash
+git clone https://github.com/your-username/chessp.git
+
+
+2. Create a Virtual Environment (Optional but Recommended)
+
+3. Install Dependencies
 pip install -r requirements.txt
-2. Train the Model (Optional)
-Place PGN files in the data/ folder.
 
-bash
-Copy
-Edit
-cd src
-python train.py
-3. Run the Chess GUI
-bash
-Copy
-Edit
-cd src
+4. Train the Neural Network (Optional)
+Download a PGN dataset (e.g., from https://database.lichess.org/)
+
+Place it in the data/ folder (e.g., data/lichess_db_standard_rated_2015-09.pgn)
+
+Start training:
+
+The trained model will be saved in src/models/trained_chessnet.pt
+
+5. Run the Chess GUI
+
 python main.py
-🧠 Training Info
-Model: 5-layer feedforward network
 
-Input: Flattened tensor of chess board (773 floats)
-
-Output: Score between -1 (loss) to +1 (win)
-
-Loss: MSELoss
-
-Optimizer: Adam
-
-You can adjust the training settings (games, epochs, learning rate) in train.py.
-
-🖥️ GPU Support
-Make sure CUDA is installed and PyTorch is GPU-enabled:
-
-bash
-Copy
-Edit
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
-Check if GPU is used:
-
-python
-Copy
-Edit
-print(torch.cuda.is_available())
-print(torch.cuda.get_device_name(0))
+Use the graphical interface to play against the neural network engine.
