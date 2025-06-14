@@ -1,0 +1,24 @@
+# Bytecode
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+v3/
+
+# Training data
+data/
+*.pgn
+*.zst
+*.bin
+*.torrent
+
+# Trained models
+src/models/
+*.pt
+
+# Editor/project files
+.vscode/
+*.env
+
+# Jupyter
+.ipynb_checkpoints/
